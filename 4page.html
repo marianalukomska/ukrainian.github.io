@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="plugins/css/all.min.css" />
+    <!-- Custom styles -->
+  
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here-->
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Quiz</title>
+    <style>
+        body {
+            font-family: cursive, sans-serif;
+            color: rgb(247, 244, 224);
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            width: 800px;
+            height: 500px;
+            top: 3cm;
+            left: 7cm;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+        .answers li {
+            margin-bottom: 10px;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Welche Stadt passt zu dir am besten?</h1>
+        <form id="quiz">
+            <div class="question">
+                <p>1. Was gefällt Ihnen am meisten?</p>
+                <ul class="answers">
+                    <li><input type="radio" name="q1" value="Odessa"> Meer</li>
+                    <li><input type="radio" name="q1" value="Lwiw"> Alte Atmosphäre</li>
+                    <li><input type="radio" name="q1" value="Kiew"> Modernität</li>
+                    <li><input type="radio" name="q1" value="Uzhhorod"> Natur und Berge</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>2. Welches Essen mögen sie am liebsten?</p>
+                <ul class="answers">
+                    <li><input type="radio" name="q2" value="Odessa"> Meeresfrüchte</li>
+                    <li><input type="radio" name="q2" value="Lwiw"> Authentisches Essen</li>
+                    <li><input type="radio" name="q2" value="Kiew"> Delikatessen</li>
+                    <li><input type="radio" name="q2" value="Uzhhorod"> Hausmannkost</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>3. Welches Jahreszeit mögen Sie am besten?</p>
+                <ul class="answers">
+                    <li><input type="radio" name="q3" value="Odessa"> Heisse Sommer</li>
+                    <li><input type="radio" name="q3" value="Lwiw"> Regnerischer Herbst</li>
+                    <li><input type="radio" name="q3" value="Kiew"> Weihnachtszeit</li>
+                    <li><input type="radio" name="q3" value="Uzhhorod"> Brühender Frühling</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>4. Was ist das Wichtigste für Sie in einem Stadt?</p>
+                <ul class="answers">
+                    <li><input type="radio" name="q4" value="Odessa"> Alte Gebäude</li>
+                    <li><input type="radio" name="q4" value="Lwiw"> Atmosphäre</li>
+                    <li><input type="radio" name="q4" value="Kiew"> Viele Einkaufszentren und Laden</li>
+                    <li><input type="radio" name="q4" value="Uzhhorod"> Natur und Architektur</li>
+                </ul>
+            </div>
+            <button type="button" onclick="showResult()">Stadt</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Diese Stadt passt zu Ihnen am besten:</h2>
+            <p id="city"></p>
+        </div>
+    </div>
+
+    <script>
+        function showResult() {
+            var answers = document.querySelectorAll('input[type="radio"]:checked');
+            if (answers.length < 4) {  // There are 4 questions
+                alert('Beantworten Sie bitte alle Fragen!');
+                return;
+            }
+            var counts = { Odessa: 0, Lwiw: 0, Kiew: 0, Uzhhorod: 0 };
+            answers.forEach(answer => {
+                counts[answer.value]++;
+            });
+
+            var bestFit = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+            var cityName = '';
+            switch (bestFit) {
+                case 'Odessa':
+                    cityName = 'Odessa';
+                    break;
+                case 'Lwiw':
+                    cityName = 'Lwiw';
+                    break;
+                case 'Kiew':
+                    cityName = 'Kiew';
+                    break;
+                case 'Uzhhorod':
+                    cityName = 'Uzhhorod';
+                    break;
+            }
+
+            document.getElementById('city').innerText = cityName;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+</a>
+<a href="index.html" style="background: none; border: none; padding: 0;">
+  <button type="submit" style="background: none; border: none; padding: 0;">
+      <img src="house.png" style="position: relative; width: 210px; height: 180px;
+      position: absolute;
+      bottom: 12.2cm;
+      right: 20cm;" />
+    
+    </a>
+     
+    </a>
+     <a href="2page.html" style="background: none; border: none; padding: 0;">
+      <button type="submit" style="background: none; border: none; padding: 0;">
+      <img src="karte.png" style="position: relative; width: 210px; height: 180px;
+      position: absolute;
+      bottom: 12.2cm;
+      right: 13cm;" />
+     
+      </a>
+   
+    </a>
+      <a href="3page.html" style="background: none; border: none; padding: 0;">
+      <button type="submit" style="background: none; border: none; padding: 0;">
+        <img src="tourismus.png" style="position: relative; width: 210px; height: 180px;
+        position: absolute;
+        bottom: 12.2cm;
+        right: 6cm;" />
+              </a>
+        
+      </a>
+      <a href="4page.html" style="background: none; border: none; padding: 0;">
+        <button type="submit" style="background: none; border: none; padding: 0;">
+          <img src="umfrage.png" style="position: relative; width: 210px; height: 180px;
+          position: absolute;
+          bottom: 12.2cm;
+          left: 17cm;" />
+                 </a>
+          <body>
+            <style>
+              body {
+                background-image:  url('photo.jpg');
+                background-size: 1700px;
+          }
+          
+            </style>
+          
+          <body>
+          <head>
+          <style>
+          </style>
+                <!-- End your project here-->
+              </body>
+          
+            <!-- MDB ESSENTIAL -->
+            <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+            <!-- MDB PLUGINS -->
+            <script type="text/javascript" src="plugins/js/all.min.js"></script>
+            <!-- Custom scripts -->
+            <script type="text/javascript"></script>
+          </html>
+          

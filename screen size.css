@@ -1,74 +1,81 @@
-/* Default styles for all screen sizes */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* CSS for 1920x1080 screen resolution */
+@media (min-width: 1920px) and (min-height: 1080px) {
+    body {
+        background-color: lightblue;
+        font-size: 18px;
+    }
+
+    header {
+        height: 100px;
+        background-color: navy;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        background-color: darkblue;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        height: 50px;
+        background-color: navy;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-}
+/* CSS for screens smaller than 1920x1080 */
+@media (max-width: 1919px), (max-height: 1079px) {
+    body {
+        background-color: white;
+        font-size: 16px;
+    }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #444;
-  padding: 1em 0;
-}
+    header {
+        height: 80px;
+        background-color: darkslategray;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5em 1em;
-}
+    nav {
+        background-color: slategray;
+        padding: 8px;
+    }
 
-/* Styles for small screens (mobile devices) */
-@media (max-width: 600px) {
-  nav {
-      flex-direction: column;
-  }
-  
-  nav a {
-      padding: 1em 0;
-  }
-}
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
 
-/* Styles for medium screens (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  nav {
-      flex-direction: row;
-  }
-  
-  nav a {
-      padding: 0.5em 1em;
-  }
-  
-  .container {
-      padding: 1em;
-  }
-}
+    main {
+        padding: 15px;
+    }
 
-/* Styles for large screens (desktops) */
-@media (min-width: 1025px) {
-  .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2em;
-  }
-  
-  .sidebar {
-      float: left;
-      width: 25%;
-      padding: 1em;
-      background-color: #f4f4f4;
-  }
-  
-  .main-content {
-      float: right;
-      width: 70%;
-      padding: 1em;
-  }
+    footer {
+        height: 40px;
+        background-color: darkslategray;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
